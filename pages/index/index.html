@@ -6,17 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
         <!-- <link href="/dist/output.css" rel="stylesheet"> -->
-
         <title>Our great hub for fellow sausage enjoyers</title>
-
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <!-- add icon link -->
-        <link rel = "icon" href = 
-"/assets/Namnlös.png" 
-        type = "image/x-icon">
-          
-    </head>
+        <link rel="icon" href="/assets/Namnlös.png" type="image/x-icon">
     </head>
     <body>
+        <div id="nav-placeholder"></div>
+        <h1>välkomna till denna fina hemsida</h1>
         <div class="text-8xl">välkomna till denna fina hemsida</div>
+        <div id="fotter-placeholder"></div>
+        <script>
+$(function(){
+  $("#nav-placeholder").load("../../layouts/navbar.html");
+  $("#fotter-placeholder").load("../../layouts/fotter.html");
+});
+//load navbar from nav.html
+        </script>
     </body>
 </html>
