@@ -4,9 +4,19 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>The sausage enjoyers</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
     <body>
+        <div id="nav-placeholder"></div>
         <h1>välkomna till denna fina hemsida</h1>
+        <div id="fotter-placeholder"></div>
+        <script>
+$(function(){
+  $("#nav-placeholder").load("../../layouts/navbar.html");
+  $("#fotter-placeholder").load("../../layouts/fotter.html");
+});
+//ladda navbaren från nav.html
+        </script>
     </body>
 </html>
