@@ -10,84 +10,101 @@
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <!-- add icon link -->
         <link rel="icon" href="/assets/Namnlös.png" type="image/x-icon">
+        <link rel="stylesheet" href="../../css/universalStyle.css">
         <style>
             .start {
-                background-image: url("../../assets/Homemade-Sausage-2-500x500.jpg");
+                background-image: url("../../assets/821440.jpg");
                 background-size: cover;
             }
             .person {
                 background-image: url("../../assets/pexels-simon-robben-614810.jpg");
                 background-size: cover;
+                opacity: 0.8;
             }
-
+            .person:hover{
+                opacity: 1;
+            }
+            .content {
+                background-color: #003459;
+            }
+            .recension {
+                background-image: url("../../assets/Sheet-Pan-Sausage-and-Vegetables-scaled.jpg");
+                
+            }
         </style>
     </head>
     <body>
-        <div id="nav-placeholder"></div>
-        <div class="content  bg-slate-600">
-            <div class="start h-screen">
-                <br>
-                <div class="loggo flex justify-center p-20  ">
-                    <img class="  h-40 rounded-3xl  shadow-2xl shadow-black" src="../../assets/Namnlös.png" alt="">
-                </div>
-                <div">
-                    <h1 class="text-6xl text-center m-10 text-slate-200 drop-shadow-sm "> The sausage enjoyers</h1>
-                    <div class=" text-center m-10 text-slate-200 drop-shadow-xl"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore fuga, consequuntur, illo, architecto cum commodi possimus aperiam adipisci incidunt voluptatum quasi dicta laboriosam error libero ipsa mollitia. Recusandae, quasi facere!</div>
-                </div>
-                <div class="socials">
-                    <div>
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
+        <div class="content">
+            <div class=" ">
+                <div class="start h-screen">
+                    <div id="nav-placeholder"></div>
+                    <br>
+                    <div class="loggo flex justify-center  "></div>
+                    <div class=" bg-slate-900 bg-opacity-50 mx-28 rounded-full p-1">
+                        <h1 class="text-6xl text-center m-10 text-slate-200  "> The sausage enjoyers</h1>
+                        <div class=" text-center m-10 text-slate-200 drop-shadow-xl mx-24"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore fuga, consequuntur, illo, architecto cum commodi possimus aperiam adipisci incidunt voluptatum quasi dicta laboriosam error libero ipsa mollitia. Recusandae, quasi facere!</div>
+                    </div>
+                    <div class="socials">
+                        <div>
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="recension"></div>
-            <div class="Om oss shadow-xl">
-                <div>
-                    <h1 class=" text-center text-3xl m-10">Om oss</h1>
+                <div class="">
+                    <div class=" text-6xl text-center m-5">
+                        <a href="../våra korvtester/sausageTest.html"> våra recensioner</a>
+                    </div>
+                    <div class="recension m-10">
+                        <div class=" p-5">
+                            <h1 class="text-center text-3xl"> jätte bra</h1>
+                        </div>
+                        <div class="m-20">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos praesentium ratione unde architecto nam! Provident recusandae molestiae nesciunt asperiores, porro, impedit dolor magni, eaque ea aut dolorem error laborum alias.
+                        </div>
+                        <div class="raiting">3/10</div>
+                    </div>
                 </div>
-                <div class="flex justify-around">
-                    <div class="m-10"> 
-                        <div class="text-center mb-10"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolore, dicta officiis ut sed ex, veniam facere odit quasi odio quisquam libero laborum ratione eaque consequuntur eligendi? Quos, repudiandae hic?</div>
-                        <img src="../../assets/800597.jpg" alt="">
+                <div class="Om oss shadow-xl">
+                    <div>
+                        <h1 class=" text-center text-3xl m-10">Om oss</h1>
+                    </div>
+                    <div class="flex justify-around flex-wrap">
+                        <div class="m-10 w-1/2">
+                            <div class="text-center mb-10"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolore, dicta officiis ut sed ex, veniam facere odit quasi odio quisquam libero laborum ratione eaque consequuntur eligendi? Quos, repudiandae hic?</div>
+                            <img class=" shadow-inner shadow-black " src="../../assets/800597.jpg" alt="">
                             <div class="socials">
                                 <img src="" alt="">
                                 <img src="" alt="">
                                 <img src="" alt="">
                             </div>
-                    </div>
-                    <div>
-                        <div class="person m-10 rounded-lg border-solid shadow-black shadow-md">
-                            <h1 class=" mb-5 text-center text-xl">Pedro Gonzales</h1>
-                            <div class="text-center m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut provident quo consequatur atque ullam ea ab necessitatibus, tempora obcaecati doloribus nobis odit ut, laudantium quam veritatis quia, mollitia sint minima.</div>
-                            
                         </div>
-                        <div class="person m-10 rounded-lg border-solid shadow-black shadow-md">
-                            <h1 class=" mb-5 text-center text-xl">Pedro Gonzales</h1>
-                            <div class="text-center m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut provident quo consequatur atque ullam ea ab necessitatibus, tempora obcaecati doloribus nobis odit ut, laudantium quam veritatis quia, mollitia sint minima.</div>
-                            
+                        <div class=" w-96">
+                            <div class="person m-10 rounded-lg border-solid shadow-black shadow-md">
+                                <h1 class=" mb-5 text-center text-xl">Pedro Gonzales</h1>
+                                <div class="text-center m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut provident quo consequatur atque ullam ea ab necessitatibus, tempora obcaecati doloribus nobis odit ut, laudantium quam veritatis quia, mollitia sint minima.</div>
+                            </div>
+                            <div class="person m-10 rounded-lg border-solid shadow-black shadow-md">
+                                <h1 class=" mb-5 text-center text-xl">Pedro Gonzales</h1>
+                                <div class="text-center m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut provident quo consequatur atque ullam ea ab necessitatibus, tempora obcaecati doloribus nobis odit ut, laudantium quam veritatis quia, mollitia sint minima.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="gallery-container p-10">
-                 <div class="mb-10"><h1 class="text-center text-3xl">Korvgalleri</h1></div>
-                <div class="shadow-md shadow-black">
-                   <img class="gallery " src="../../assets/800597.jpg" alt="">
+                <div class="gallery-container p-10">
+                    <div class="mb-10">
+                        <h1 class="text-center text-4xl">Korvgalleri</h1>
+                    </div>
+                    <div class="shadow-md shadow-black">
+                        <img class="gallery rounded-lg" src="../../assets/800597.jpg" alt="">
+                    </div>
                 </div>
-                
+                <div></div>
             </div>
-
-            <div></div>
-            
         </div>
         <div id="fotter-placeholder"></div>
         <script>
-
-
-
-
 $(function(){
   $("#nav-placeholder").load("../../layouts/navbar.html");
   $("#fotter-placeholder").load("../../layouts/fotter.html");
