@@ -7,21 +7,35 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <!-- <link href="/dist/output.css" rel="stylesheet"> -->
         <title>Our great hub for fellow sausage enjoyers</title>
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <!-- add icon link -->
         <link rel="icon" href="/assets/Namnlös.png" type="image/x-icon">
         <link rel="stylesheet" href="../../css/universalStyle.css">
+        <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+        <script src="./sausageNearYou.js"></script>
+        <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js" crossorigin="anonymous"></script>
+        <!-- add icon link -->
+        <link rel="icon" href="/assets/Namnlös.png" type="image/x-icon">
     </head>
     <body>
         <div class="korvNäraDig">
             <div id="nav-placeholder"></div>
             <div>
                 <h1 class="text-center p-10 text-5xl"> Korv nära dig</h1>
+                <div class="flex justify-center">
+                    <div id="map" class="h-[550px] w-[900px]"></div>
+                </div>
                 <div class="text-center mx-20">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus repudiandae, ullam consequuntur inventore iure nemo repellendus! Animi officiis nam est, ex reprehenderit et doloremque soluta dolorum exercitationem minima ab impedit.
                 </div>
             </div>
         </div>
+
+            
+         
+            <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLcWujHANe8qJ68AtpeH1XPuzzp_FTCeM&callback=initMap&libraries=places&v=weekly"
+            defer></script>
         <script>
 $(function(){
   $("#nav-placeholder").load("../../layouts/navbar.html");

@@ -6,4 +6,3 @@ async function randomSausage(id) {
     let y = await x.name;
     myElement.innerHTML = y;
   }
-  
