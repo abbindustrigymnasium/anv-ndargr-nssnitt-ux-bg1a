@@ -2,11 +2,30 @@
   color: white;
   text-shadow: 2px 1px 3px #000000;
   font-weight: 700;
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-div {
+h1 {
+  font-size: xx-large;
+}
+h3 {
+  font-size: x-large;
+}
+h2 {
+  font-size: xx-large;
+}
+h4 {
   font-size: large;
 }
+h5 {
+  font-size: xx-large;
+}
+div {
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /* text shadow to inecrease readning and improve contrast */
 body {
   background-color: #003869;
