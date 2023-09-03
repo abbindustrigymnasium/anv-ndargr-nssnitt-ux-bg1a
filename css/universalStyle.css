@@ -5,7 +5,7 @@
 }
 
 div {
-  
+  font-size: large;
 }
 /* text shadow to inecrease readning and improve contrast */
 body {
@@ -24,7 +24,7 @@ body {
   opacity: 1;
 }
 
-/* Styling for the container */
+/* styling for an immage slider */
 .slider-container {
   position: relative;
   overflow: hidden;
@@ -32,19 +32,16 @@ body {
   margin: 0 auto;
 }
 
-/* Styling for the image slider */
 .slider {
   display: flex;
   transition: transform 0.5s ease;
 }
 
-/* Styling for the individual images */
 .slider img {
   width: 100%;
   height: auto;
 }
 
-/* Styling for the left and right arrows */
 .arrow {
   position: absolute;
   top: 50%;
@@ -61,7 +58,6 @@ body {
   right: 10px;
 }
 
-/* Styling for the pagination dots */
 .pagination {
   text-align: center;
   margin-top: 20px;
