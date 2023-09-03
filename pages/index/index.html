@@ -25,6 +25,8 @@
                 background-image: url("../../assets/Sheet-Pan-Sausage-and-Vegetables-scaled.jpg");
                 
             }
+
+
         </style>
     </head>
     <body>
@@ -68,7 +70,16 @@
                     <div class="flex justify-around flex-wrap">
                         <div class="m-10 w-1/2">
                             <div class="text-center mb-10"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolore, dicta officiis ut sed ex, veniam facere odit quasi odio quisquam libero laborum ratione eaque consequuntur eligendi? Quos, repudiandae hic?</div>
-                            <img class=" shadow-inner shadow-black " src="../../assets/800597.jpg" alt="">
+                            <div class="slider-container shadow-md">
+                                <div class="slider shadow-md shadow-black rounded-lg">
+                                    <img class=" rounded-lg" src="../../assets/800597.jpg" alt="">
+                                    <img src="/assets/821440.jpg" alt="Image 2">
+                                    <img src="/assets/Homemade-Sausage-2-500x500.jpg" alt="Image 3">
+        
+                                </div>
+                                <div class="arrow left" onclick="moveSlider(-1)">←</div>
+                                <div class="arrow right" onclick="moveSlider(1)">→</div>
+                            </div>
                             <div class="socials">
                                 <img src="" alt="">
                                 <img src="" alt="">
@@ -91,15 +102,26 @@
                     <div class="mb-10">
                         <h1 class="text-center text-4xl">Korvgalleri</h1>
                     </div>
-                    <div class="shadow-md shadow-black">
-                        <img class="gallery rounded-lg" src="../../assets/800597.jpg" alt="">
+                    <div class="slider-container shadow-md">
+                        <div class="slider shadow-md shadow-black rounded-lg">
+                            <img class=" rounded-lg" src="../../assets/800597.jpg" alt="">
+                            
+                            <img src="/assets/821440.jpg" alt="Image 2">
+                            <img src="/assets/Homemade-Sausage-2-500x500.jpg" alt="Image 3">
+
+                        </div>
+                        <div class="arrow left" onclick="moveSlider(-1)">←</div>
+                        <div class="arrow right" onclick="moveSlider(1)">→</div>
                     </div>
+                    <div class="pagination" id="pagination"></div>
+
                 </div>
                 <div></div>
             </div>
         </div>
         <div id="fotter-placeholder"></div>
         <button class=" invisible" onclick="randomSausage('sausage_master')">Click me</button>
+        <script src="/js/slider.js"></script>
         <script>
 $(function(){
   $("#nav-placeholder").load("../../layouts/navbar.html");

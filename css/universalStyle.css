@@ -3,6 +3,10 @@
   text-shadow: 2px 1px 3px #000000;
   font-weight: 700;
 }
+
+div {
+  
+}
 /* text shadow to inecrease readning and improve contrast */
 body {
   background-color: #003869;
@@ -20,4 +24,59 @@ body {
   opacity: 1;
 }
 
+/* Styling for the container */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+}
 
+/* Styling for the image slider */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Styling for the individual images */
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+/* Styling for the left and right arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+/* Styling for the pagination dots */
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #888;
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.active-dot {
+  background-color: #333;
+}
