@@ -27,30 +27,90 @@
                         <h1 class="text-center p-10 text-5xl ">
                             Dagens korv
                         </h1>
-                        <h1 class="text-center  text-3xl pb-5">
+                        <h1 class="sausage text-center  text-3xl pb-5">
                             Korv
                         </h1>
                     </div>
                 </div>
-                <div class="flex justify-between flex-wrap px-28 h-screen">
-                    <div class=" w-1/3 bg-gray-950 rounded-xl bg-opacity-70 shadow-2xl mb-20">
+                <div class="flex justify-between flex-wrap px-14 h-screen">
+                    <div class=" w-1/3 bg-gray-950 rounded-xl bg-opacity-70 shadow-2xl mb-20 p-3">
                         <div>
-                            <h1 class="text-center text-2xl m-5 ">
+                            <h1 class="text-center text-2xl m-4 ">
                                 Ingridienser
                             </h1>
                         </div>
-                        <div class=" leading-8 m-2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, saepe eaque mollitia deserunt dolore tempora nam numquam minima illum voluptatibus quidem nesciunt expedita provident veniam harum earum quibusdam aut omnis?
-                        </div>
+                        <md-block class="leading-8 m-2">
+                            - **- 2 pund (900 gram) köttfärs**
+                            - **- 1/2 pund (225 gram) fläskmage eller fläskbuken, fint hackad**
+                            - **- 2 vitlöksklyftor, pressade**
+                            - **- 1 tesked salt**
+                            - **- 1/2 tesked svartpeppar**
+                            - **- 1/2 tesked paprika (valfritt)**
+                            - **- 1/2 tesked torkade örter**
+                            - **- Naturliga korvskal**
+                            - **- Köksnöre**
+                            - **- Isvatten**
+                        </md-block>
                     </div>
-                    <div class=" w-1/3 bg-gray-950 rounded-xl bg-opacity-70 shadow-2xl mb-20">
+                    <div class=" w-1/2 bg-gray-950 rounded-xl bg-opacity-70 shadow-2xl mb-20 p-3">
                         <div>
                             <h1 class="text-center text-2xl m-5 ">
                                 Instruktioner
                             </h1>
                         </div>
                         <div class=" leading-8 m-2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, saepe eaque mollitia deserunt dolore tempora nam numquam minima illum voluptatibus quidem nesciunt expedita provident veniam harum earum quibusdam aut omnis?
+                            <!-- Random sausage recepie created by chat gpt-->
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Skölj korvskalen noggrant</strong> under kallt vatten.
+                                </li>
+                                <li>
+                                    <strong>Blötlägg korvskalen</strong> i isvatten i cirka 30 minuter.
+                                </li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Kombinera ingredienserna</strong> i en stor skål.
+                                </li>
+                                <li>
+                                    <strong>Blanda noggrant</strong>.
+                                </li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Använd en köttkvarn</strong> för att få en jämn konsistens.
+                                </li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Fäst korvskalen</strong> på en korvfyllare eller tratt.
+                                </li>
+                                <li>
+                                    <strong>Fyll korvskalen med köttblandningen</strong>, undvik luftbubblor.
+                                </li>
+                                <li>
+                                    <strong>Knyt korvarna med köksnöre</strong> efter önskad längd, vanligtvis 10-15 centimeter. Lämna lite extra korvskal i ändarna för att säkra dem.
+                                </li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Tvista korvarna</strong> i regelbundna intervall för att skapa enskilda korvlänkar.
+                                </li>
+                                <li>
+                                    <strong>Fäst med köksnöre</strong>.
+                                </li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>Låt korvarna vila i kylskåpet i minst några timmar eller över natten för att smakerna ska blanda sig.</li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Tillaga korvarna</strong> genom att grilla, steka, baka eller koka.
+                                </li>
+                                <li>
+                                    <strong>Förvara i en tättslutande behållare</strong> i kylskåpet i några dagar eller frys för längre hållbarhet om de inte tillagas omedelbart.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -62,6 +122,80 @@ $(function(){
   $("#fotter-placeholder").load("../../layouts/fotter.html");
 });
 //load navbar from nav.html
+
+
+
+const sausageNames = [
+  "Classic Bratwurst",
+  "Spicy Chorizo",
+  "Italian Salsiccia",
+  "Smoked Kielbasa",
+  "Vienna Frankfurter",
+  "Andouille Delight",
+  "Cajun Boudin",
+  "Breakfast Link",
+  "Maple Bacon Sausage",
+  "Polish Pierogi Sausage",
+  "Garlic and Herb Brat",
+  "Gourmet Chicken Sausage",
+  "Applewood Smoked Sausage",
+  "Bavarian Weisswurst",
+  "Spanish Longaniza",
+  "Mediterranean Merguez",
+  "Texas BBQ Sausage",
+  "Teriyaki Terroir Sausage",
+  "Jalapeno Cheddar Brat",
+  "Hawaiian Luau Sausage",
+  "Cranberry Turkey Sausage",
+  "Gator and Andouille Sausage",
+  "Buffalo Wing Sausage",
+  "Pesto Parmesan Sausage",
+  "Thai Curry Sausage",
+  "Moroccan Lamb Sausage",
+  "Oktoberfest Bockwurst",
+  "Beer-Infused Sausage",
+  "Cajun Crawfish Sausage",
+  "Black Forest Smokie",
+  "Sriracha Sausage Sensation",
+  "Irish Breakfast Banger",
+  "Smoky Chipotle Chorizo",
+  "Buffalo Blue Cheese Sausage",
+  "Wild Boar Bratwurst",
+  "Lemon Pepper Chicken Sausage",
+  "Mango Habanero Link",
+  "Tandoori Tikka Sausage",
+  "Greek Gyro Sausage",
+  "Wild Mushroom Truffle Sausage",
+  "All-American Hot Dog",
+  "Cheddar and Beer Brat",
+  "Swedish Potato Sausage",
+  "Vegan Apple Sage Sausage",
+  "Caribbean Jerk Sausage",
+  "Spinach and Feta Chicken Sausage",
+  "Smoked Salmon Sausage",
+  "Duck and Fig Link"
+];
+
+//list of sausage names generated by chat gpt
+var randomSausage = ''
+
+
+
+console.log(Math.floor(Math.random() * 50))
+
+
+function randomSausages() {
+    randomSausage = sausageNames[Math.floor(Math.random() * 50)];
+    document.getElementsByClassName('sausage')[0].innerHTML = randomSausage;
+    console.log(sausageText);
+    console.log(randomSausage);
+}
+
+//function to call a rdnaom sausage name form the sausage name list
+//we searcht for apis that would generate random sausage names but we did not find any easy one to work with
+
+randomSausages();
         </script>
+        <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     </body>
 </html>

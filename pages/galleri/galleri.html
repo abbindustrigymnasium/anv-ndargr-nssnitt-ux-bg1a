@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+        <title>Our great hub for fellow sausage enjoyers</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <!-- add icon link -->
+        <link rel="icon" href="/assets/Namnlös.png" type="image/x-icon">
+        <link rel="stylesheet" href="../../css/universalStyle.css">
+        <style>
+            .galleryBox {
+                height: 200px;
+                width: 200px;
+                background-size: cover;
+            }
+            :hover.galleryBox {
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="korvNäraDig">
+            <div id="nav-placeholder"></div>
+            <div>
+                <h1 class="text-center p-10 text-5xl"> Korvgalleri</h1>
+                <div class="gallery flex flex-wrap">
+                    <img class="galleryBox" src="/assets/Homemade-Sausage-2-500x500.jpg" alt="">
+                    <img class="galleryBox" src="/assets/sausage.jpg" alt="">
+                    <img class="galleryBox" src="/assets/Grilled-Sausage-4.jpg" alt="">
+                    <img class="galleryBox" src="/assets/821440.jpg" alt="">
+                    <img class="galleryBox" src="/assets/800597.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <script>
+$(function(){
+  $("#nav-placeholder").load("../../layouts/navbar.html");
+  $("#fotter-placeholder").load("../../layouts/fotter.html");
+});
+//load navbar from nav.html
+        </script>
+    </body>
+</html>
