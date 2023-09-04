@@ -13,11 +13,14 @@
         <link rel="stylesheet" href="../../css/universalStyle.css">
         <style>
             .galleryBox {
-                height: 200px;
-                width: 200px;
+                height: 250px;
+                opacity: 0.7;
                 background-size: cover;
             }
-            :hover.galleryBox {
+            .galleryBox:hover {
+                opacity: 1;
+            }
+            hover.galleryBox {
 
             }
         </style>
@@ -27,7 +30,7 @@
             <div id="nav-placeholder"></div>
             <div>
                 <h1 class="text-center p-10 text-5xl"> Korvgalleri</h1>
-                <div class="gallery flex flex-wrap">
+                <div id="gallery" class=" flex flex-wrap">
                     <img class="galleryBox" src="/assets/Homemade-Sausage-2-500x500.jpg" alt="">
                     <img class="galleryBox" src="/assets/sausage.jpg" alt="">
                     <img class="galleryBox" src="/assets/Grilled-Sausage-4.jpg" alt="">
@@ -42,6 +45,65 @@ $(function(){
   $("#fotter-placeholder").load("../../layouts/fotter.html");
 });
 //load navbar from nav.html
+
+const container = document.getElementById('gallery');
+
+        var randomSausage = 'hello'
+
+        // Define your API key and custom search engine ID
+        const apiKey = 'AIzaSyBSbQBomCakdYRuE5VMKVtV0XNvxljXE4Y';
+        const cx = '34e0ae634fc3f4000';
+        let imageUrls = [  ];
+        // Function to fetch and display search results
+
+        function searchGoogle() {
+
+
+            
+            //get random sausage for the search results
+            const searchQuery = 'sausage';
+            console.log(searchQuery);
+
+            // Construct the API request URL
+            const api = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${searchQuery}&searchType=image`;
+
+            const imageUrls = [];
+            var count = 0;
+
+            // Make the API request
+            fetch(api)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.items);
+                    if (data.items) {
+                        data.items.forEach(item => {
+                            imageUrls[count] = item.link;
+                            count++;
+                            console.log(item.link);
+                            const korv = document.createElement('div');
+
+                         // Set the background image for the <div>
+                            korv.style.backgroundImage = `url(${item.link})`;
+                            korv.classList.add('galleryBox');
+                            korv.appendChild(newDiv);
+                        });
+                    } else {
+                        console.log('No results found.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            return imageUrls;
+
+        }
+
+        //function for loading images using the google search api
+        // this function can be a bit slow to the rate limmet, so be pantient and dont click on the random korv button to much
+
+        imageUrls = (searchGoogle());
+        console.log(imageUrls);
+        </script>
         </script>
     </body>
 </html>
