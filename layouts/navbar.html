@@ -17,11 +17,12 @@
 .dropdown {
     position: relative;
     display: inline-block;
+   
 }
 
 /* Styles for the dropdown button */
 #dropdown-button {
-    background-color: #4CAF50;
+
     color: white;
     padding: 10px;
     border: none;
@@ -37,13 +38,16 @@
     
     z-index: 1;
     list-style: none;
-
+    width: 500px;
+    height: 500px;
 }
 
 /* Styles for the dropdown menu items */
 #dropdown-menu li {
     padding: 10px;
     text-align: left;
+
+ 
 }
 
 /* Highlight the menu items on hover */
@@ -60,9 +64,23 @@
     <body>
         
         <div class="navbar flex justify-between bg-black bg-opacity-60 shadow-lg shd">
-            <a href="../index/index.html" class="  m-3 ml-7  bg-white shadow-lg shadow-white">
-                <img src="/assets/Namnlös.png" alt="" class=" h-12  ">
-            </a>
+            
+            <div class="dropdown shadow-2xl ml-5 m-1 ">
+                <button id="dropdown-button" class=" ">
+                    <img src="/assets/Namnlös.png" alt="" class=" h-12  ">
+                </button>
+                <ul id="dropdown-menu">
+                    <li>
+                        <a href="#">Item 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Item 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Item 3</a>
+                    </li>
+                </ul>
+            </div>
             <div class="flex mr-40">
                 <div class="p-5">
                     <a href="../index/index.html"> Home</a>
@@ -88,20 +106,7 @@
 
                 
             </div>
-            <div class="dropdown m-5">
-                <button id="dropdown-button"></button>
-                <ul id="dropdown-menu">
-                    <li>
-                        <a href="#">Item 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Item 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Item 3</a>
-                    </li>
-                </ul>
-            </div>
+            
         </div>
         <script>
             // JavaScript to close the dropdown menu when clicking outside of it
