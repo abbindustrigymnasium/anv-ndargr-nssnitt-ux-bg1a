@@ -11,9 +11,7 @@
         <!-- add icon link -->
         <link rel="icon" href="/assets/Namnlös.png" type="image/x-icon">
         <link rel="stylesheet" href="../../css/universalStyle.css">
-        
-        
-        <style> 
+        <style>
             .dagensKorv {
                 background-size:contain;
                ;
@@ -32,7 +30,6 @@
                         <h1 class="sausage text-center  text-3xl pb-5">
                             "klicka"
                         </h1>
-                        
                     </button>
                 </div>
                 <div class="flex justify-between flex-wrap px-14 h-screen">
@@ -233,7 +230,7 @@ $(function(){
             document.getElementsByClassName('sausage')[0].innerHTML = randomSausage;
             document.getElementsByClassName('dagensKorv')[0].style.backgroundImage = 'url(' + imageUrls[1] + ')'
             imageUrls = (searchGoogle());
-            alert("hello!");
+            alert("LOADING...");
         }
                   //function to call a rdnaom sausage name form the sausage name list
           //we searcht for apis that would generate random sausage names but we did not find any easy one to work with

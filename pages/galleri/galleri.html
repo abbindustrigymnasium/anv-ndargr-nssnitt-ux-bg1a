@@ -13,15 +13,21 @@
         <link rel="stylesheet" href="../../css/universalStyle.css">
         <style>
             .galleryBox {
-                height: 250px;
+                height: 300px;
                 opacity: 0.7;
                 background-size: cover;
             }
             .galleryBox:hover {
                 opacity: 1;
             }
-            hover.galleryBox {
-
+            .galleryimg {
+                height: 300px;
+                width: 400px;
+                opacity: 0.7;
+                background-size: cover;
+            }
+            .galleryimg:hover {
+                opacity: 1;
             }
         </style>
     </head>
@@ -29,13 +35,22 @@
         <div class="korvNäraDig">
             <div id="nav-placeholder"></div>
             <div>
-                <h1 class="text-center p-10 text-5xl"> Korvgalleri</h1>
-                <div id="gallery" class=" flex flex-wrap">
+                <div class="flex justify-center"><h1 class="text-center p-10 text-5xl m-10 bg-black bg-opacity-60 w-1/2"> Korvgalleri</h1>
+                </div>
+                <div id="gallery" class="newDiv flex flex-wrap justify-center">
                     <img class="galleryBox" src="/assets/Homemade-Sausage-2-500x500.jpg" alt="">
                     <img class="galleryBox" src="/assets/sausage.jpg" alt="">
                     <img class="galleryBox" src="/assets/Grilled-Sausage-4.jpg" alt="">
                     <img class="galleryBox" src="/assets/821440.jpg" alt="">
                     <img class="galleryBox" src="/assets/800597.jpg" alt="">
+                    <img class="galleryBox" src="/assets/aboutUs/_60971216-c155-4d54-9fd0-58d7a3e5ba44.jfif" alt="">
+                    <img  class="galleryBox"src="/assets/aboutUs/_bc22cc04-7249-4a7a-9986-5254a225b947.jfif" alt="">
+                    <img  class="galleryBox" src="/assets/aboutUs/OIG.k3fNBr.jfif" alt="">
+                    <img  class="galleryBox" src="/assets/821440.jpg" alt="">
+                    <img  class="galleryBox" src="/assets/hirosy/_60971216-c155-4d54-9fd0-58d7a3e5ba44.jfif" alt="">
+                    <img  class="galleryBox" src="/assets/pexels-simon-robben-614810.jpg" alt="">
+                    <img  class="galleryBox" src="/assets/aboutUs/_cb5f2b94-f838-4cfc-9f52-7544cea350cf.jfif" alt="">
+                    <img  class="galleryBox" src="/assets/aboutUs/_bc22cc04-7249-4a7a-9986-5254a225b947.jfif" alt="">
                 </div>
             </div>
         </div>
@@ -58,8 +73,6 @@ const container = document.getElementById('gallery');
 
         function searchGoogle() {
 
-
-            
             //get random sausage for the search results
             const searchQuery = 'sausage';
             console.log(searchQuery);
@@ -80,12 +93,14 @@ const container = document.getElementById('gallery');
                             imageUrls[count] = item.link;
                             count++;
                             console.log(item.link);
-                            const korv = document.createElement('div');
+                            let korv = document.createElement('div');
 
                          // Set the background image for the <div>
                             korv.style.backgroundImage = `url(${item.link})`;
-                            korv.classList.add('galleryBox');
-                            korv.appendChild(newDiv);
+                            
+                            korv.classList.add('galleryimg');
+                            
+                            document.getElementById("gallery").appendChild(korv);
                         });
                     } else {
                         console.log('No results found.');
@@ -104,6 +119,6 @@ const container = document.getElementById('gallery');
         imageUrls = (searchGoogle());
         console.log(imageUrls);
         </script>
-        </script>
-    </body>
+    </script>
+</body>
 </html>
