@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+        <title>Our great hub for fellow sausage enjoyers</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <!-- add icon link -->
+        <link rel="icon" href="/assets/Namnlös.png" type="image/x-icon">
+        <link rel="stylesheet" href="../../css/universalStyle.css">
+        <style>
+            .galleryBox {
+                height: 300px;
+                opacity: 0.7;
+                background-size: cover;
+            }
+            .galleryBox:hover {
+                opacity: 1;
+            }
+            .galleryimg {
+                height: 300px;
+                width: 400px;
+                opacity: 0.7;
+                background-size: cover;
+            }
+            .galleryimg:hover {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="korvNäraDig">
+            <div id="nav-placeholder"></div>
+            <div>
+                <div class="flex justify-center"><h1 class="text-center p-10 text-5xl m-10 bg-black bg-opacity-60 w-1/2"> Korveri (Galleri)</h1>
+                </div>
+                <div id="gallery" class="newDiv flex flex-wrap justify-center">
+                    <img class="galleryBox" src="/assets/Homemade-Sausage-2-500x500.jpg" alt="">
+                    <img class="galleryBox" src="/assets/sausage.jpg" alt="">
+                    <img class="galleryBox" src="/assets/Grilled-Sausage-4.jpg" alt="">
+                    <img class="galleryBox" src="/assets/821440.jpg" alt="">
+                    <img class="galleryBox" src="/assets/800597.jpg" alt="">
+                    <img class="galleryBox" src="/assets/aboutUs/_60971216-c155-4d54-9fd0-58d7a3e5ba44.jfif" alt="">
+                    <img  class="galleryBox"src="/assets/aboutUs/_bc22cc04-7249-4a7a-9986-5254a225b947.jfif" alt="">
+                    <img  class="galleryBox" src="/assets/aboutUs/OIG.k3fNBr.jfif" alt="">
+                    <img  class="galleryBox" src="/assets/821440.jpg" alt="">
+                    <img  class="galleryBox" src="/assets/hirosy/_60971216-c155-4d54-9fd0-58d7a3e5ba44.jfif" alt="">
+                    <img  class="galleryBox" src="/assets/pexels-simon-robben-614810.jpg" alt="">
+                    <img  class="galleryBox" src="/assets/aboutUs/_cb5f2b94-f838-4cfc-9f52-7544cea350cf.jfif" alt="">
+                    <img  class="galleryBox" src="/assets/aboutUs/_bc22cc04-7249-4a7a-9986-5254a225b947.jfif" alt="">
+                </div>
+            </div>
+        </div>
+        <script>
+$(function(){
+  $("#nav-placeholder").load("../../layouts/navbar.html");
+  $("#fotter-placeholder").load("../../layouts/fotter.html");
+});
+//load navbar from nav.html
+
+const container = document.getElementById('gallery');
+
+        var randomSausage = 'hello'
+
+        // Define your API key and custom search engine ID
+        const apiKey = 'AIzaSyBSbQBomCakdYRuE5VMKVtV0XNvxljXE4Y';
+        const cx = '34e0ae634fc3f4000';
+        let imageUrls = [  ];
+        // Function to fetch and display search results
+
+        function searchGoogle() {
+
+            //get random sausage for the search results
+            const searchQuery = 'sausage';
+            console.log(searchQuery);
+
+            // Construct the API request URL
+            const api = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${searchQuery}&searchType=image`;
+
+            const imageUrls = [];
+            var count = 0;
+
+            // Make the API request
+            fetch(api)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.items);
+                    if (data.items) {
+                        data.items.forEach(item => {
+                            imageUrls[count] = item.link;
+                            count++;
+                            console.log(item.link);
+                            let korv = document.createElement('div');
+
+                         // Set the background image for the <div>
+                            korv.style.backgroundImage = `url(${item.link})`;
+                            
+                            korv.classList.add('galleryimg');
+                            
+                            document.getElementById("gallery").appendChild(korv);
+                        });
+                    } else {
+                        console.log('No results found.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            return imageUrls;
+
+        }
+
+        //function for loading images using the google search api
+        // this function can be a bit slow to the rate limmet, so be pantient and dont click on the random korv button to much
+
+        imageUrls = (searchGoogle());
+        console.log(imageUrls);
+        </script>
+    </script>
+</body>
+</html>

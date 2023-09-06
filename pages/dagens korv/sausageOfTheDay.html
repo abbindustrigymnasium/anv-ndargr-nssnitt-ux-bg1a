@@ -4,9 +4,237 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+        <title>Our great hub for fellow sausage enjoyers</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <!-- add icon link -->
+        <link rel="icon" href="/assets/Namnlös.png" type="image/x-icon">
+        <link rel="stylesheet" href="../../css/universalStyle.css">
+        <style>
+            .dagensKorv {
+                background-size:contain;
+               ;
+            }
+        </style>
     </head>
     <body>
-        <h1>dagens korv</h1>
+        <div class="korvNäraDig">
+            <div class="dagensKorv ">
+                <div id="nav-placeholder"></div>
+                <div  class="flex justify-center mb-20 md:mb-0">
+                    <button onclick="randomKorv()" class="bg-black bg-opacity-60 w-full md:w-1/2 m-5 ">
+                        <h1 class="text-center md:p-10 py-10 text-5xl ">
+                            Dagens korv
+                        </h1>
+                        <h1 class="sausage text-center  text-3xl pb-5">
+                            "klicka"
+                        </h1>
+                    </button>
+                </div>
+                <div class="flex justify-center flex-wrap md:px-14  ">
+                    <div class=" w-full lg:w-1/3 bg-gray-950 md:mx-5  bg-opacity-70 shadow-2xl mb-20 p-3 min-w-[400px]">
+                        <div>
+                            <h1 class="text-center text-2xl m-4 ">
+                                Ingredienser
+                            </h1>
+                        </div>
+                        <md-block class="leading-8 m-2">
+                            - **- 2 pund (900 gram) köttfärs**
+                            - **- 1/2 pund (225 gram) fläskmage eller fläskbuken, fint hackad**
+                            - **- 2 vitlöksklyftor, pressade**
+                            - **- 1 tesked salt**
+                            - **- 1/2 tesked svartpeppar**
+                            - **- 1/2 tesked paprika (valfritt)**
+                            - **- 1/2 tesked torkade örter**
+                            - **- Naturliga korvskal**
+                            - **- Köksnöre**
+                            - **- Isvatten**
+                        </md-block>
+                    </div>
+                    <div class=" w-full lg:w-1/2 bg-gray-950 bg-opacity-70 shadow-2xl mb-20 p-3  min-w-[400px]">
+                        <div>
+                            <h1 class="text-center text-2xl m-5 ">
+                                Instruktioner
+                            </h1>
+                        </div>
+                        <div class=" leading-8 m-2">
+                            <!-- Random sausage recepie created by chat gpt-->
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Skölj korvskalen noggrant</strong> under kallt vatten.
+                                </li>
+                                <li>
+                                    <strong>Blötlägg korvskalen</strong> i isvatten i cirka 30 minuter.
+                                </li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Kombinera ingredienserna</strong> i en stor skål.
+                                </li>
+                                <li>
+                                    <strong>Blanda noggrant</strong>.
+                                </li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Använd en köttkvarn</strong> för att få en jämn konsistens.
+                                </li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Fäst korvskalen</strong> på en korvfyllare eller tratt.
+                                </li>
+                                <li>
+                                    <strong>Fyll korvskalen med köttblandningen</strong>, undvik luftbubblor.
+                                </li>
+                                <li>
+                                    <strong>Knyt korvarna med köksnöre</strong> efter önskad längd, vanligtvis 10-15 centimeter. Lämna lite extra korvskal i ändarna för att säkra dem.
+                                </li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Tvista korvarna</strong> i regelbundna intervall för att skapa enskilda korvlänkar.
+                                </li>
+                                <li>
+                                    <strong>Fäst med köksnöre</strong>.
+                                </li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>Låt korvarna vila i kylskåpet i minst några timmar eller över natten för att smakerna ska blanda sig.</li>
+                            </ol>
+                            <ol class="list-decimal list-inside mb-4">
+                                <li>
+                                    <strong>Tillaga korvarna</strong> genom att grilla, steka, baka eller koka.
+                                </li>
+                                <li>
+                                    <strong>Förvara i en tättslutande behållare</strong> i kylskåpet i några dagar eller frys för längre hållbarhet om de inte tillagas omedelbart.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+$(function(){
+  $("#nav-placeholder").load("../../layouts/navbar.html");
+  $("#fotter-placeholder").load("../../layouts/fotter.html");
+});
+//load navbar from nav.html
+        var randomSausage = 'hello'
+
+        // Define your API key and custom search engine ID
+        const apiKey = 'AIzaSyBSbQBomCakdYRuE5VMKVtV0XNvxljXE4Y';
+        const cx = '34e0ae634fc3f4000';
+        let imageUrls = [  ];
+        // Function to fetch and display search results
+
+        const sausageNames = [
+        "Classic Bratwurst",
+        "Spicy Chorizo",
+        "Italian Salsiccia",
+        "Smoked Kielbasa",
+        "Vienna Frankfurter",
+        "Andouille Delight",
+        "Cajun Boudin",
+        "Breakfast Link",
+        "Maple Bacon Sausage",
+        "Polish Pierogi Sausage",
+        "Garlic and Herb Brat",
+        "Gourmet Chicken Sausage",
+        "Applewood Smoked Sausage",
+        "Bavarian Weisswurst",
+        "Spanish Longaniza",
+        "Mediterranean Merguez",
+        "Texas BBQ Sausage",
+        "Teriyaki Terroir Sausage",
+        "Jalapeno Cheddar Brat",
+        "Hawaiian Luau Sausage",
+        "Cranberry Turkey Sausage",
+        "Gator and Andouille Sausage",
+        "Buffalo Wing Sausage",
+        "Pesto Parmesan Sausage",
+        "Thai Curry Sausage",
+        "Moroccan Lamb Sausage",
+        "Oktoberfest Bockwurst",
+        "Beer-Infused Sausage",
+        "Cajun Crawfish Sausage",
+        "Black Forest Smokie",
+        "Sriracha Sausage Sensation",
+        "Irish Breakfast Banger",
+        "Smoky Chipotle Chorizo",
+        "Buffalo Blue Cheese Sausage",
+        "Wild Boar Bratwurst",
+        "Lemon Pepper Chicken Sausage",
+        "Mango Habanero Link",
+        "Tandoori Tikka Sausage",
+        "Greek Gyro Sausage",
+        "Wild Mushroom Truffle Sausage",
+        "All-American Hot Dog",
+        "Cheddar and Beer Brat",
+        "Swedish Potato Sausage",
+        "Vegan Apple Sage Sausage",
+        "Caribbean Jerk Sausage",
+        "Spinach and Feta Chicken Sausage",
+        "Smoked Salmon Sausage",
+        "Duck and Fig Link"
+      ];
+
+        function searchGoogle() {
+
+            randomSausage = sausageNames[Math.floor(Math.random() * 50)];
+            //get random sausage for the search results
+            const searchQuery = randomSausage;
+            console.log(searchQuery);
+            // Construct the API request URL
+            const api = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${searchQuery}&searchType=image`;
+
+            const imageUrls = [];
+            var count = 0;
+
+            // Make the API request
+            fetch(api)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.items);
+                    if (data.items) {
+                        data.items.forEach(item => {
+                            imageUrls[count] = item.link;
+                            count++;
+                            console.log(item.link);
+                        });
+                    } else {
+                        console.log('No results found.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            return imageUrls;
+
+        }
+
+        //function for loading images using the google search api
+        // this function can be a bit slow to the rate limmet, so be pantient and dont click on the random korv button to much
+
+        imageUrls = (searchGoogle());
+        console.log(imageUrls);
+          function randomKorv() {
+            console.log(imageUrls);
+            console.log(imageUrls[1]);
+            randomSausage = sausageNames[Math.floor(Math.random() * 50)];
+            document.getElementsByClassName('sausage')[0].innerHTML = randomSausage;
+            document.getElementsByClassName('dagensKorv')[0].style.backgroundImage = 'url(' + imageUrls[1] + ')'
+            imageUrls = (searchGoogle());
+            alert("LOADING...");
+        }
+                  //function to call a rdnaom sausage name form the sausage name list
+          //we searcht for apis that would generate random sausage names but we did not find any easy one to work with
+          //list of sausage names generated by chat gpt
+          console.log(Math.floor(Math.random() * 50))
+        </script>
+        <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     </body>
 </html>
