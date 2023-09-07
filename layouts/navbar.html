@@ -54,7 +54,7 @@
     </head>
     <body>
         <div class="navbar flex justify-between bg-black bg-opacity-60 shadow-lg shd">
-            <div class="dropdown shadow-2xl ml-5 ">
+            <div class="dropdown shadow-2xl ml-5 w-24 ">
                 <button id="dropdown-button" class=" ">
                     <img src="/assets/Namnlös.png" alt="" class=" h-12 ">
                 </button>
@@ -111,14 +111,16 @@
                 </div>
             </div>
             <div class="w-full justify-center text-2xl hidden md:flex ">
-                <a href="../index/index.html" class="xl:text-lg md:p-2 xl:p-4 lg:text-bold"> Home</a>
-                <a href="../våra korvtester/sausageTest.html" class="xl:text-lg md:p-2 xl:p-4 lg:text-bold">Recsensioner</a>
-                <a href="../korv nära dig/sausageNearYou.html" class="xl:text-lg md:p-2 xl:p-4 lg:text-bold">Hitta</a>
-                <a href="../korvens historia/history.html" class="xl:text-lg md:p-2 xl:p-4 lg:text-bold">Historia</a>
-                <a href="../dagens korv/sausageOfTheDay.html" class="xl:text-lg md:p-2 xl:p-4 lg:text-bold">Dagens korv</a>
-                <a href="/pages/galleri/galleri.html" class="xl:text-lg md:p-2 xl:p-4 lg:text-bold">Korveri</a>
-                <a href="../om oss/aboutUs.html" class="xl:text-lg md:p-2 xl:p-4 lg:text-bold">Om oss</a>
+                <a href="../index/index.html" class="xl:text-md md:p-2 xl:p-4 lg:text-bold"> Home</a>
+                <a href="../våra korvtester/sausageTest.html" class="xl:text-md md:p-2 xl:p-4 lg:text-bold">Recsensioner</a>
+                <a href="../korv nära dig/sausageNearYou.html" class="xl:text-md md:p-2 xl:p-4 lg:text-bold">Hitta</a>
+                <a href="../korvens historia/history.html" class="xl:text-md md:p-2 xl:p-4 lg:text-bold">Historia</a>
+                <a href="../dagens korv/sausageOfTheDay.html" class="xl:text-md md:p-2 xl:p-4 lg:text-bold">Dagens korv</a>
+                <a href="/pages/galleri/galleri.html" class="xl:text-md md:p-2 xl:p-4 lg:text-bold">Korveri</a>
+                <a href="../om oss/aboutUs.html" class="xl:text-md md:p-2 xl:p-4 lg:text-bold">Om oss</a>
+                
             </div>
+            <div id="greetingBox" class=" py-4 text-md md:hidden lg:block  w-72 text-xl md:text-lg lg:"  ></div>
         </div>
         <script>
             // JavaScript to close the dropdown menu when clicking outside of it
@@ -137,6 +139,20 @@ const dropdownMenu = document.getElementById('dropdown-menu');
 dropdownButton.addEventListener('click', function() {
     dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
 });
+
+
+    function greetUser() {
+        let  greetingBox = document.getElementById('greetingBox');
+        const cookies = document.cookie.split(';');
+        if (cookies.length > 1) {
+        let name = cookies[0]
+        console.log(cookies);
+        console.log(name);
+        greetingBox.innerHTML ='Hej  '+ name + '!';
+        }
+    }
+    greetUser();
+
         </script>
     </body>
 </html>
