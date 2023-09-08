@@ -1,10 +1,23 @@
 * {
   color: white;
   text-shadow: 2px 1px 3px #000000;
-  font-weight: 700;
-  font-size: large;
+  font-weight: 500;
+
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+
+  line-height: 2.2;
 }
+
+/* the standard styling*/
+
+@media (min-width: 64em) {
+  * {
+    font-size: medium;
+  }
+}
+
+.active-dot
 
 h1 {
   font-size: xx-large;
@@ -21,18 +34,23 @@ h4 {
 h5 {
   font-size: xx-large;
 }
+
+/*text size for the different headuing */
 div {
-  font-size: medium;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Helvetica, sans-serif
 }
 
 /* text shadow to inecrease readning and improve contrast */
 body {
   background-color: #003869;
 }
+body.dark-mode {
+  background-color: #000000;
+}
 :hover {
   text-shadow: 0px 0px 0px #000000;
 }
+
 
 .person {
   background-image: url("../../assets/pexels-simon-robben-614810.jpg");
