@@ -64,7 +64,7 @@ function searchGoogle() {
     //get random sausage for the search results
     const searchQuery = randomSausage;
     console.log(searchQuery);
-    // Construct the API request URL
+    // Construct the API request URL from google serach, but only immages
     const api = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${searchQuery}&searchType=image`;
 
     const imageUrls = [];
@@ -77,6 +77,7 @@ function searchGoogle() {
             console.log(data.items);
             if (data.items) {
                 data.items.forEach(item => {
+                    // loop for setting the n:th array in immage urls to the link of our google search
                     imageUrls[count] = item.link;
                     count++;
                     console.log(item.link);
@@ -89,18 +90,19 @@ function searchGoogle() {
             console.error('Error:', error);
         });
     return imageUrls;
-
+    //returning an array of image urls for our google search api
 }
-
 //function for loading images using the google search api
 // this function can be a bit slow to the rate limmet, so be pantient and dont click on the random korv button to much
 
 imageUrls = (searchGoogle());
 console.log(imageUrls);
   function randomKorv() {
+
     console.log(imageUrls);
     console.log(imageUrls[1]);
     randomSausage = sausageNames[Math.floor(Math.random() * 50)];
+    console.log(randomSausage);
     document.getElementsByClassName('sausage')[0].innerHTML = randomSausage;
     document.getElementsByClassName('dagensKorv')[0].style.backgroundImage = 'url(' + imageUrls[1] + ')'
     imageUrls = (searchGoogle());

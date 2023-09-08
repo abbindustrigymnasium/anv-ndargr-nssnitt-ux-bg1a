@@ -31,13 +31,12 @@ const container = document.getElementById('gallery');
                             imageUrls[count] = item.link;
                             count++;
                             console.log(item.link);
+                            // creat a div
                             let korv = document.createElement('div');
-
-                         // Set the background image for the <div>
+                         // Set the background image for the <div> to an immage for google search api results
                             korv.style.backgroundImage = `url(${item.link})`;
-                            
                             korv.classList.add('galleryimg');
-                            
+                            //append child to the gallery
                             document.getElementById("gallery").appendChild(korv);
                         });
                     } else {
