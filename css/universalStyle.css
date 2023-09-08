@@ -38,6 +38,7 @@ body {
   background-image: url("../../assets/pexels-simon-robben-614810.jpg");
   background-size: cover;
   opacity: 0.8;
+  background-position: center;
 }
 .person:hover {
   opacity: 1;
