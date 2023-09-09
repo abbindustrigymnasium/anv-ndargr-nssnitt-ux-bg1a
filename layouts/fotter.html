@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/css/universalStyle.css">
     </head>
     <body>
-        <div class=" flex shadow-inner flex-wrap  bg-cyan-950">
+        <div class=" flex shadow-inner flex-wrap  bg-black bg-opacity-30">
             <div class=" newletter md:w-1/2 mb-12">
                     <h3 class="text-center">Stöd oss</h3>
                 <div class="flex justify-center m-1">
@@ -28,7 +28,7 @@
                         <button onclick="GreetUserName()" class="mx-3 px-3 font-medium bg-black bg-opacity-50 shadow-md shadow-black hover:shadow-none ">skicka</button>
                     </div>
                 </div>
-                <div class="text-xs p-3 leading-6 font-light lg:px-10 xl:px-20 text-slate-300">
+                <div class="text-xs p-3 leading-6 font-light lg:px-10 xl:px-20 text-slate-200">
                     På KorvHems hemsida samlades korvälskare för att hitta klassiska korvrecept, nya korvexperiment och experttips för grillning. Korvhistorierna tog läsarna med på en resa genom korvens historia, från antiken till modern tid.
                 </div>
                 <div class="flex justify-around p-2 m-5  ">
@@ -41,11 +41,8 @@
         <script>
             function GreetUserName() {
                 let name = document.getElementById('name').value
-                document.cookie = name;
-                const cookies = document.cookie.split(';');
-                let cookie = cookies[0]
-                console.log(cookies);
-                alert('We will sed you an email shortly,' + cookie);
+                document.cookie = 'name=' + name;
+                alert('We will sed you an email shortly,' + name);
             }
         </script>
     </body>

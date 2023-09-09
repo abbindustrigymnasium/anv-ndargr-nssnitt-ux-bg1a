@@ -9,10 +9,17 @@ const container = document.getElementById('gallery');
         let imageUrls = [  ];
         // Function to fetch and display search results
 
-        function searchGoogle() {
+        const search = document.getElementById('searchBtn')
+        search.addEventListener('click', function() {
+            let search = document.getElementById('imgSearch').value
+            searchGoogle('search');
+            imageUrls = (searchGoogle('sausage'));
+            searchGoogle('fine hottdog')
+        });
+
+        function searchGoogle(searchQuery) {
 
             //get random sausage for the search results
-            const searchQuery = 'sausage';
             console.log(searchQuery);
 
             // Construct the API request URL
@@ -53,5 +60,5 @@ const container = document.getElementById('gallery');
         //function for loading images using the google search api
         // this function can be a bit slow to the rate limmet, so be pantient and dont click on the random korv button to much
 
-        imageUrls = (searchGoogle());
+
         console.log(imageUrls);
