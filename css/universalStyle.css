@@ -1,7 +1,6 @@
 * {
   line-height: 2.2;
   font-size: small;
-
 }
 
 /* the standard styling*/
@@ -12,9 +11,7 @@
   }
 }
 
-.active-dot
-
-h1 {
+.active-dot h1 {
   font-size: xx-large;
 }
 h3 {
@@ -32,8 +29,6 @@ h5 {
 
 /*text size for the different headuing */
 
-
-
 /* text shadow to inecrease readning and improve contrast */
 
 body.dark {
@@ -47,7 +42,7 @@ body.light {
 }
 
 body.monospace {
- font-family: monospace;
+  font-family: monospace;
 }
 
 body.arial {
@@ -55,7 +50,7 @@ body.arial {
 }
 
 body.times {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 body.large {
@@ -69,7 +64,7 @@ body.medium {
 }
 
 body.bold {
- font-weight: 600;
+  font-weight: 600;
 }
 
 body.thin {
@@ -77,16 +72,12 @@ body.thin {
 }
 
 body {
-
   font-weight: 500;
   background-color: #003869;
   color: white;
   text-shadow: 2px 1px 3px #000000;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-
-
-
 
 .person {
   background-image: url("../../assets/pexels-simon-robben-614810.jpg");
