@@ -18,7 +18,6 @@
     position: relative;
     display: inline-block;
 }
-
 /* Styles for the dropdown button */
 #dropdown-button {
 
@@ -27,21 +26,15 @@
     border: none;
     cursor: pointer;
 }
-
 #dropdown-menu {
     display: none;
     position: absolute;
     z-index: 1;
     list-style: none;
-
-
 }
-
-
 .dropdown-button:onclick #dropdown-menu {
     display: flex;
 }
-
 .setting:hover {
     background-color: #2d2d2d;
 }
@@ -56,7 +49,7 @@
         <div class="navbar flex justify-between bg-black bg-opacity-60 shadow-lg shd">
             <div class="dropdown shadow-2xl ml-5 w-24 ">
                 <button id="dropdown-button" class=" ">
-                    <img src="/assets/Namnlös.png" alt="" class=" h-12 ">
+                    <img src="/assets/Namnlös.png" alt="dropdown-button" class=" h-12 ">
                 </button>
                 <div id="dropdown-menu" class=" bg-black bg-opacity-90 w-80 md:w-96 ">
                     <div class=" shadow-xl shadow-black p-2  bg-slate-800">
@@ -75,37 +68,37 @@
                         <h1 class=" text-center m-5 text-2xl  ">Settings</h1>
                     </div>
                     <div class="shadow-md shadow-black ">
-                        <h3 class="text-xl text-center mt-16 m-4">color</h3>
+                        <h3 class="text-xl text-center m-4 bg-slate-500">Color</h3>
                         <div class="flex justify-around ">
-                            <div class="setting">
+                            <div class="setting" id="colorChangeButton">
                                 Dark
                             </div>
-                            <div class="setting"> White</div>
-                            <div class="setting">Normal</div>
+                            <button onclick="lightMode()" class="setting" id="light"> Light</button>
+                            <button onclick="normalMode()" class="setting" id="light"> Normal</button>
                         </div>
                     </div>
                     <div class="shadow-md shadow-black ">
-                        <h3 class="text-xl text-center m-4 mt-16">Font</h3>
+                        <h3 class="text-xl text-center m-4 bg-slate-500 ">Font</h3>
                         <li class="flex justify-around ">
-                            <button class="setting">small</button>
-                            <button class="setting">medium</button>
-                            <button class="setting">large</button>
+                            <button onclick="monospace()" class="setting">mono</button>
+                            <button onclick="arial()" class="setting">Arial</button>
+                            <button onclick="times()" class="setting">Times</button>
                         </li>
                     </div>
                     <div class="shadow-md shadow-black ">
-                        <h3 class="text-xl text-center m-4 mt-16">text size</h3>
+                        <h3 class="text-xl text-center m-4 bg-slate-500 ">text size</h3>
                         <li class=" flex justify-around ">
-                            <button class="setting">small</button>
-                            <button class="setting">medium</button>
-                            <button class="setting">large</button>
+                            <button class="setting" onclick="smallText()">small</button>
+                            <button class="setting" onclick="mediumText()">medium</button>
+                            <button class="setting" onclick="largeText()">large</button>
                         </li>
                     </div>
                     <div class="shadow-md shadow-black ">
-                        <h3 class="text-xl text-center m-4 mt-16"> Boldness</h3>
+                        <h3 class="text-xl text-center m-4 bg-slate-500"> Boldness</h3>
                         <li class=" flex justify-around ">
-                            <button class="setting">Thin</button>
-                            <button class="setting">medium</button>
-                            <button class="setting">Bold</button>
+                            <button class="setting" onclick="thin()">Thin</button>
+                            <button class="setting" onclick="medium()">medium</button>
+                            <button class="setting" onclick="bold()">Bold</button>
                         </li>
                     </div>
                 </div>
@@ -118,12 +111,13 @@
                 <a href="../dagens korv/sausageOfTheDay.html" class="xl:text-md md:p-2 xl:p-4 lg:text-bold">Dagens korv</a>
                 <a href="/pages/galleri/galleri.html" class="xl:text-md md:p-2 xl:p-4 lg:text-bold">Korveri</a>
                 <a href="../om oss/aboutUs.html" class="xl:text-md md:p-2 xl:p-4 lg:text-bold">Om oss</a>
-                
             </div>
-            <div id="greetingBox" class=" py-4 text-md md:hidden lg:block  w-72 text-xl md:text-lg lg:"  ></div>
+            <div id="greetingBox" class=" py-4 text-md md:hidden lg:block  w-72 text-xl md:text-lg lg:"></div>
+            <div class="p-4 text-sm md:hidden xl:block">SWE</div>
         </div>
+        <script src="/js/colorchange.js"></script>
         <script>
-            // JavaScript to close the dropdown menu when clicking outside of it
+            //  close the dropdown menu when clicking outside of it
 window.addEventListener('click', function(event) {
     const dropdownButton = document.getElementById('dropdown-button');
     const dropdownMenu = document.getElementById('dropdown-menu');
@@ -131,27 +125,97 @@ window.addEventListener('click', function(event) {
         dropdownMenu.style.display = 'none';
     }
 });
-
-// JavaScript to toggle the dropdown menu when the button is clicked
+// toggle the dropdown menu when the button is clicked
 const dropdownButton = document.getElementById('dropdown-button');
 const dropdownMenu = document.getElementById('dropdown-menu');
 
 dropdownButton.addEventListener('click', function() {
     dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+
+//when thedropdown icon is clicked we show the dropdown menu
+
 });
-
-
     function greetUser() {
         let  greetingBox = document.getElementById('greetingBox');
         const cookies = document.cookie.split(';');
-        if (cookies.length > 1) {
-        let name = cookies[0]
-        console.log(cookies);
-        console.log(name);
-        greetingBox.innerHTML ='Hej  '+ name + '!';
+        for (let i = 0; i < cookies.length; i++) {
+            //checking if the cookie has the username 
+            if (cookies[i].includes('name')) {
+                let nameStr = cookies[i].split('=')
+                let name = nameStr[1]
+                console.log(cookies);
+                console.log(name);
+                greetingBox.innerHTML ='Hej  '+ name + '!';
+            }
         }
     }
+    
+    //function for getting a cookie and greeting the user by its name
     greetUser();
+
+
+         //function for changing the color of the site
+
+    const colorChangeButton = document.getElementById('colorChangeButton');
+        colorChangeButton.addEventListener('click', function() {
+            // Toggle the 'color-change' class on the body element
+            document.cookie = 'color=dark'
+
+            location.reload();
+        });
+        function lightMode() {
+            document.cookie = 'color=light'
+
+            location.reload();
+        }
+        function normalMode() {
+            document.cookie = 'color=normal'
+
+            location.reload();
+        }
+        // function for changing the text font
+        function monospace() {
+            document.cookie = 'font=monospace';
+            location.reload();
+        }
+        function arial() {
+            document.cookie = 'font=arial';
+            location.reload();
+        }
+        function times() {
+            document.cookie = 'font=times';
+            location.reload();
+        }
+        //function for changing the size of the text
+        function smallText() {
+    document.cookie = 'text=small'
+            location.reload();
+        }
+        function largeText() {
+            document.cookie = 'text=large'
+            location.reload();
+        }
+        function mediumText() {
+            document.cookie = 'text=medium'
+            location.reload();
+        }
+        //functions for changing the font thickness
+        function bold() {
+            document.cookie = 'thickness=bold'
+            location.reload();
+        }
+        function thin() {
+            document.cookie = 'thickness=thin'
+            location.reload();
+        }
+        function medium() {
+            document.cookie = 'thickness=medium'
+            location.reload();
+        }
+
+        //this code could be reduced by isted of writing out al lot of functions use on function that that takes in different parameters
+
+
 
         </script>
     </body>

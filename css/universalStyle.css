@@ -1,12 +1,6 @@
 * {
-  color: white;
-  text-shadow: 2px 1px 3px #000000;
-  font-weight: 500;
-
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: small;
-
   line-height: 2.2;
+  font-size: small;
 }
 
 /* the standard styling*/
@@ -34,19 +28,55 @@ h5 {
 }
 
 /*text size for the different headuing */
-div {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 /* text shadow to inecrease readning and improve contrast */
-body {
-  background-color: #003869;
-}
-body.dark-mode {
+
+body.dark {
   background-color: #000000;
+  color: white;
+  text-shadow: 2px 1px 3px #000000;
 }
-:hover {
-  text-shadow: 0px 0px 0px #000000;
+body.light {
+  background-color: aliceblue;
+  text-shadow: 2px 2px 3px #000000;
+}
+
+body.monospace {
+  font-family: monospace;
+}
+
+body.arial {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body.times {
+  font-family: "Times New Roman", Times, serif;
+}
+
+body.large {
+  font-size: medium;
+}
+body.small {
+  font-size: x-small;
+}
+body.medium {
+  font-size: small;
+}
+
+body.bold {
+  font-weight: 600;
+}
+
+body.thin {
+  font-weight: 400;
+}
+
+body {
+  font-weight: 500;
+  background-color: #003869;
+  color: white;
+  text-shadow: 2px 1px 3px #000000;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .person {
