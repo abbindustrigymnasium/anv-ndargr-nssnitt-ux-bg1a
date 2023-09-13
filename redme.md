@@ -1,7 +1,7 @@
 # The Sausage Enjoyers - a website all about sausages
 
 Welcome to our website, your one-stop destination for all things sausage-related. Here you can find sausage immages, receipis, sausage reviews and the sausage resturants near you
- This website project was created by **Sebastian** and **Malte** as a school project. The primary goal of the school project was to create a food website, that is user friendly that adheres to the guidelines of **WCAG 2.0**; as well as using some sort of **API**. Here on our webiste, you can explore various sausage-related features and satisfy your cravings for these delectable delights.
+ This website project was created by **Sebastian** and **Malte** as a school project. The primary goal of the school project was to create a food website, that is user friendly that adheres to the guidelines of **WCAG 2.1**; as well as using some sort of **API**. Here on our webiste, you can explore various sausage-related features and satisfy your cravings for these delectable delights.
 
 ## Table of Contents
 
@@ -22,6 +22,7 @@ Welcome to our website, your one-stop destination for all things sausage-related
   - [Design](#design)
     - [Website design](#website-design)
     - [Code Readability](#code-readability)
+    - [Accessibility Testing](#accessibility-testing)
   - [Contributing](#contributing)
   - [License](#license)
   - [Contact](#contact)
@@ -78,7 +79,8 @@ Our website also includes a footer where you can support our sausage journey. by
 
 ### Website design
 
-Our website's design has been designed with user-friendliness and accessibility in mind, as per the requierments to adhere to the **WCAG 2.0 (AA)** guidlines, for the school project. We have incorporated several key design elements to ensure that our webiste is an inclusive and user-friendly platform for everyone:
+Our website's design has been designed with user-friendliness and accessibility in mind, as per the requierments to adhere to the **WCAG 2.1 (AA)** guidlines, for the school project. We have incorporated several key design elements to ensure that our webiste is an inclusive and user-friendly platform for everyone:
+
 
 - **High Contrast Backgrounds:** We utilize high contrast backgrounds to effectively separate text from the background, enhancing readability and making content more accessible. we also use only one background color, but with different light levels to avoid the risk of a bad color selaction on the website. that also helps for implementing dark an lite mode.
 
@@ -90,7 +92,7 @@ Our website's design has been designed with user-friendliness and accessibility 
 
 - **Responsive Design:** Our webiste is responsive, meaning it can be comfortably viewed on screens of various sizes, from smartphones to large TV screens. This responsive design ensures a consistent and user-friendly experience across all devices.
 
-By implementing these design principles, we adhere to the guidelines of WCAG 2.0 (AA), which prioritize creating accessible and user-friendly interfaces on the web. Our commitment to accessibility ensures that our webiste is a welcoming and inclusive platform for all users.
+By implementing these design principles, we adhere to the guidelines of WCAG 2.1 (AA), which prioritize creating accessible and user-friendly interfaces on the web. Our commitment to accessibility ensures that our webiste is a welcoming and inclusive platform for all users.
 
 ### Code Readability
 
@@ -98,11 +100,23 @@ We prioritize code readability to enhance understanding and maintainability. Her
 
 - **Meaningful Variables:** We use descriptive variable names.
 - **Comments:** Our code is well-commented to explain logic (mostly in JavaScript)
-- **Semantic HTML:** We employ semantic tags and class names.
+- **Semantic HTML:** We employ semantic class names and IDs.
 - **Organized Structure:** Our project follows a clear folder structure: Pages, Layouts, JS, CSS, and Assets.
 - **Consistency:** We maintain a consistent coding style for clarity.
 
 These practices make our code more accessible and collaborative, supporting our project's growth and maintenance.
+
+### Accessibility Testing
+
+- **Alt Text Verification:** We confirmed the functionality of alt texts using a text-to-speech tool.
+- **Color Accessibility:** We assessed color contrast for color blindness and grayscale using [Adobe Contrast Wheel](https://color.adobe.com/sv/create/color-contrast-analyzer), AA contrast, and AAA standards.
+- **Dyslexia Readability:** To ensure readability, we tested our code with a dyslexia simulator, considering team member Sebastian's dyslexia.
+- **Functional Variation Simulation:** We used the Funkify Chrome extension to simulate various disabilities and functional variations.
+  - [Funkify Extension](https://chrome.google.com/webstore/detail/funkify-%E2%80%93-disability-simu/ojcijjdchelkddboickefhnbdpeajdjg)
+- **Automated Evaluation:** Our website underwent automated evaluation using the Wave Evaluation Tool, checking for alt text and usability errors.
+  - [Wave Evaluation Tool](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh)
+
+Through these tests and tools, we prioritize making our website inclusive and user-friendly for all visitors.
 ## Contributing
 
 This project will no longer be maindtained when this repository goas public; due to the fact that we have already pressented our project for our school. But if you have ideas for new sausage features, interesting sausage facts, or delicious sausage recipes to share, please feel free to contribute. **Follow these steps:**
