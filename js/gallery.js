@@ -11,8 +11,9 @@ const container = document.getElementById('gallery');
 
         const search = document.getElementById('searchBtn')
         search.addEventListener('click', function() {
-            let search = document.getElementById('imgSearch').value
-            searchGoogle('search');
+            let imgSearch = document.getElementById('imgSearch').value
+
+            searchGoogle(imgSearch + 'korv');
             imageUrls = (searchGoogle('sausage'));
             searchGoogle('fine hottdog')
         });
