@@ -12,6 +12,7 @@ Welcome to our website, your one-stop destination for all things sausage-related
     - [Installation](#installation)
   - [Features](#features)
     - [Home Page](#home-page)
+    - [Sausage Review](#sausage-review)
     - [Sausage Near You](#sausage-near-you)
     - [Sausage of the Day](#sausage-of-the-day)
     - [About Us](#about-us)
@@ -58,13 +59,18 @@ npm install
 Our homepage welcomes you to the savory universe of sausages.
 First you will find a large heading with, a short description of, and a shortened version of our about us page. Lastly you will find a a gallery of mouthwatering sausages.
 
+### Sausage Review
+
+Explore our sausage adventures! Our Sausage Review section features honest reviews and ratings of sausage restaurants we've visited. We share our experiences and recommend the best sausages in town. Dive into the world of sausages and discover new flavors with us.
+
+
 ### Sausage Near You
 
-Craving a delicious sausage? Use our "Sausage Near You" feature powered by Google Maps to find the nearest sausage restaurants in your area, by using your device ip adress. the google maps window is integrated into the website, so you can easly move around an fin out info about your nearest sausage.
+Craving a delicious sausage? Use our "Sausage Near You" feature powered by **Google Maps** to find the nearest sausage restaurants in your area, by using your device ip adress. the google maps window is integrated into the website, so you can easly move around an fin out info about your nearest sausage.
 
 ### Sausage of the Day
 
-Discover a new sausage every day! Our "Sausage of the Day" feature provides you with a random sausage selection along with detailed descriptions on how to prepare it. Plus, we add a touch of surprise with a random sausage image from the Google Search API. Every time you click the "dagens korv" button a random sausge will generate
+Discover a new sausage every day! Our "Sausage of the Day" feature provides you with a random sausage selection along with detailed descriptions on how to prepare it. Plus, we add a touch of surprise with a random sausage image from the **Google Search API**. Every time you click the "dagens korv" button a random sausge will generate
 
 ### About Us
 
@@ -76,15 +82,15 @@ Delve into the rich history of sausages with our informative "History of the Sau
 
 ### Gallery
 
-If you're a visual sausage enthusiast, our "Gallery" is the place for you. Search for images of different sausages and feast your eyes on their delectable forms. This page uses the same api as the sausge of the day site where you can search for immages using the google image search.
+If you're a visual sausage enthusiast, our "Gallery" is the place for you. Search for images of different sausages and feast your eyes on their delectable forms. This page uses the same **API** as the sausge of the day site where you can search for immages using the google image search.
 
 ### Navbar
 
-Our website features an easy-to-use navbar that allows seamless navigation to all sections. By clicking the dropdown icon, users can access the settings menu to personalize fonts, font size, themes (dark, light, normal), and font thickness to enhance their sausage-loving experience.
+Our website features an easy-to-use navbar that allows seamless navigation to all sections. By clicking the dropdown icon, users can access the settings menu to personalize fonts, font size, themes **(dark, light, normal)**, and font thickness to enhance their sausage-loving experience.
 
 ### Footer
 
-Our website also includes a footer where you can support our sausage journey. by sendeing un 500kr via swish, and subscribe to our newletter via emial
+Our website also includes a footer where you can support our sausage journey. by sendeing un **500kr** via swish, and subscribe to our newletter via emial **(not a real number)**
 
 ## Design
 
@@ -99,11 +105,11 @@ Our website's design has been designed with user-friendliness and accessibility 
 
 - **Keyboard Navigation:** Our website is designed with keyboard navigation in mind. Users can easily navigate through the site and access all features without relying on a mouse. This feature is essential for individuals who rely on assistive technologies or prefer keyboard-based navigation.
 
-- **Alternative Texts:** We provide alternative texts (alt text) for all non-text elements, such as images and icons. This ensures that users with visual impairments or those using screen readers can understand the context and content of these elements.
+- **Alternative Texts:** We provide alternative texts **(alt text)** for all non-text elements, such as images and icons. This ensures that users with visual impairments or those using screen readers can understand the context and content of these elements.
 
 - **Responsive Design:** Our webiste is responsive, meaning it can be comfortably viewed on screens of various sizes, from smartphones to large TV screens. This responsive design ensures a consistent and user-friendly experience across all devices.
 
-By implementing these design principles, we adhere to the guidelines of WCAG 2.1 (AA), which prioritize creating accessible and user-friendly interfaces on the web. Our commitment to accessibility ensures that our webiste is a welcoming and inclusive platform for all users.
+By implementing these design principles, we adhere to the guidelines of **WCAG 2.1 (AA)**, which prioritize creating accessible and user-friendly interfaces on the web. Our commitment to accessibility ensures that our webiste is a welcoming and inclusive platform for all users.
 
 ### Code Readability
 
