@@ -38,7 +38,18 @@ You'll need a modern web browser to access No additional software or plugins are
 
 ### Installation
 
-Our project is a web-based project, so there's no need for installation. Just clone our website at and start exploring the sausage goodness!
+Our project is a web-based project. Just clone our repo at and start exploring the sausage goodness!
+
+```bash
+# Clone the repository
+git clone https://github.com/abbindustrigymnasium/anv-ndargr-nssnitt-ux-bg1a.git
+
+# Navigate to the project directory
+cd anv-ndargr-nssnitt-ux-bg1a
+
+# Install dependencies
+npm install
+```
 
 ## Features
 
