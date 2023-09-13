@@ -12,14 +12,12 @@ const container = document.getElementById('gallery');
         const search = document.getElementById('searchBtn')
         search.addEventListener('click', function() {
             let imgSearch = document.getElementById('imgSearch').value
-
-            searchGoogle(imgSearch + 'korv');
-            imageUrls = (searchGoogle('sausage'));
+            searchGoogle(imgSearch + ' korv');
             searchGoogle('fine hottdog')
+            imageUrls = (searchGoogle('sausage'));
         });
 
         function searchGoogle(searchQuery) {
-
             //get random sausage for the search results
             console.log(searchQuery);
 
