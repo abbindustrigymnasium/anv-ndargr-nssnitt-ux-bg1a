@@ -1,7 +1,7 @@
 # The Sausage Enjoyers - a website all about sausages
 
 Welcome to our website, your one-stop destination for all things sausage-related. Here you can find sausage immages, receipis, sausage reviews and the sausage resturants near you
- This website project was created by **Sebastian** and **Malte** as a school project. The primary goal of the school project was to create a food website, that is user friendly that adheres to the guidelines of **WCAG 2.1**; as well as using some sort of **API**. Here on our webiste, you can explore various sausage-related features and satisfy your cravings for these delectable delights.
+ This website project was created by **Sebastian** and **Malte** as a school project. The primary goal of the school project was to create a food website with text,immages a table, and some sort of form. The webiste should also user friendly and adhere to the guidelines of **WCAG 2.1**; as well as to use some sort of **API**. Here on our webiste, you can explore various sausage-related features and satisfy your cravings for these delectable delights.
 
 ## Table of Contents
 
@@ -66,7 +66,7 @@ Explore our sausage adventures! Our Sausage Review section features honest revie
 
 ### Sausage Near You
 
-Craving a delicious sausage? Use our "Sausage Near You" feature powered by **Google Maps** to find the nearest sausage restaurants in your area, by using your device ip adress. the google maps window is integrated into the website, so you can easly move around an fin out info about your nearest sausage.
+Craving a delicious sausage? Use our "Sausage Near You" feature powered by **Google Maps** to find the nearest sausage restaurants in your area, by using your device ip adress. the google maps window is integrated into the website, so you can easly move around an fin out info about your nearest sausage. You can also at the end of the page sea a table of the amout of sausages prduced since 1980.
 
 ### Sausage of the Day
 
@@ -86,7 +86,7 @@ If you're a visual sausage enthusiast, our "Gallery" is the place for you. Searc
 
 ### Navbar
 
-Our website features an easy-to-use navbar that allows seamless navigation to all sections. By clicking the dropdown icon, users can access the settings menu to personalize fonts, font size, themes **(dark, light, normal)**, and font thickness to enhance their sausage-loving experience.
+Our website features an easy-to-use navbar that allows seamless navigation to all sections. By clicking the dropdown icon, users can access the settings menu to personalize fonts, font size, themes **(dark, light, normal)**, and font thickness, text size and line size to enhance their sausage-loving experience.
 
 ### Footer
 
@@ -108,6 +108,7 @@ Our website's design has been designed with user-friendliness and accessibility 
 - **Alternative Texts:** We provide alternative texts **(alt text)** for all non-text elements, such as images and icons. This ensures that users with visual impairments or those using screen readers can understand the context and content of these elements.
 
 - **Responsive Design:** Our webiste is responsive, meaning it can be comfortably viewed on screens of various sizes, from smartphones to large TV screens. This responsive design ensures a consistent and user-friendly experience across all devices.
+- **Personalized settings** In our navbar a settings menu is acsessed where you can whange themes **(normal, dark and light)**, fonts and text size, as well as boldness and line spacing; making it easier for users to customize their own experience for their needs.
 
 By implementing these design principles, we adhere to the guidelines of **WCAG 2.1 (AA)**, which prioritize creating accessible and user-friendly interfaces on the web. Our commitment to accessibility ensures that our webiste is a welcoming and inclusive platform for all users.
 
