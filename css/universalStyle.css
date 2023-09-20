@@ -1,6 +1,6 @@
 * {
-  line-height: 2.2;
-  font-size: small;
+
+
 }
 
 /* the standard styling*/
@@ -71,10 +71,24 @@ body.thin {
   font-weight: 400;
 }
 
+body.compact {
+  line-height: 1.5;
+}
+
+body.spaced{
+  line-height: 3;
+}
+
+body.norm{
+  line-height: 2.2;
+}
+
 body {
   font-weight: 500;
   background-color: #003869;
   color: white;
+  line-height: 2.2;
+  font-size: small;
   text-shadow: 2px 1px 3px #000000;
   font-family: Georgia, "Times New Roman", Times, serif;
 }

@@ -131,43 +131,51 @@
               <button class="setting" onclick="bold()">Bold</button>
             </li>
           </div>
+          <div class="shadow-md shadow-black">
+            <h3 class="text-xl text-center m-4 bg-slate-500">Line spacing</h3>
+            <li class="flex justify-around">
+              <button class="setting" onclick="leading('compact')">Compact</button>
+              <button class="setting" onclick="leading('norm')">Normal</button>
+              <button class="setting" onclick="leading('spaced')">Spaced</button>
+            </li>
+          </div>
         </div>
       </div>
       <div class="w-full justify-center text-2xl hidden md:flex">
         <a
           href="../index/index.html"
-          class="xl:text-md md:p-2 xl:p-4 lg:text-bold"
+          class="g:text-md text-sm md:p-2 xl:p-4 lg:text-bold xl:text-lg"
         >
           Home</a
         >
         <a
           href="../våra korvtester/sausageTest.html"
-          class="xl:text-md md:p-2 xl:p-4 lg:text-bold"
+          class="lg:text-md text-sm md:p-2 xl:p-4 lg:text-bold xl:text-lg"
           >Recsensioner</a
         >
         <a
           href="../korv nära dig/sausageNearYou.html"
-          class="xl:text-md md:p-2 xl:p-4 lg:text-bold"
+          class="g:text-md text-sm md:p-2 xl:p-4 lg:text-bold xl:text-lg"
           >Hitta</a
         >
         <a
           href="../korvens historia/history.html"
-          class="xl:text-md md:p-2 xl:p-4 lg:text-bold"
+          class="g:text-md text-sm md:p-2 xl:p-4 lg:text-bold xl:text-lg"
           >Historia</a
         >
         <a
           href="../dagens korv/sausageOfTheDay.html"
-          class="xl:text-md md:p-2 xl:p-4 lg:text-bold"
+          class="g:text-md text-sm md:p-2 xl:p-4 lg:text-bold xl:text-lg"
           >Dagens korv</a
         >
         <a
           href="/pages/galleri/galleri.html"
-          class="xl:text-md md:p-2 xl:p-4 lg:text-bold"
+          class="g:text-md text-sm md:p-2 xl:p-4 lg:text-bold xl:text-lg"
           >Korveri</a
         >
         <a
           href="../om oss/aboutUs.html"
-          class="xl:text-md md:p-2 xl:p-4 lg:text-bold"
+          class="g:text-md text-sm md:p-2 xl:p-4 lg:text-bold xl:text-lg"
           >Om oss</a
         >
       </div>
@@ -274,10 +282,16 @@
       }
       function medium() {
         document.cookie = "thickness=medium";
-        location.reload();
+        locatio.reload();
+        n.reload();
       }
-
-      //this code could be reduced by isted of writing out al lot of functions use on function that that takes in different parameters
+       //this code could be reduced by isted of writing out al lot of functions use on function that that takes in different parameters
+      function leading(value) {
+        const body = document.body;
+        body.classList.toggle(value);
+        locatio.reload();
+      }
+     
     </script>
   </body>
 </html>
