@@ -1,5 +1,8 @@
 # The Sausage Enjoyers - a website all about sausages
 
+- [Google Drive link to our video presentation (Swedish)](https://drive.google.com/file/d/1ISXuoieekGV5-XRm8UxsZVP4DVZY87Kx/view?usp=sharing) a little longer that expcted with our added bits
+- [link to our github kaban board](https://github.com/orgs/abbindustrigymnasium/projects/43/views/1) **for some reason it doesent show when you open the repocitory normaly, so here is a link for our project**
+
 Welcome to our website, your one-stop destination for all things sausage-related. Here you can find sausage immages, receipis, sausage reviews and the sausage resturants near you
  This website project was created by **Sebastian** and **Malte** as a school project. The primary goal of the school project was to create a food website with text,immages a table, and some sort of form. The webiste should also user friendly and adhere to the guidelines of **WCAG 2.1**; as well as to use some sort of **API**. Here on our webiste, you can explore various sausage-related features and satisfy your cravings for these delectable delights.
 
